@@ -1,0 +1,23 @@
+{
+  "synthetic": true,
+  "id": "04",
+  "title": "Flexi-cap at 70% equity",
+  "kind": "compliance",
+  "as_of": "2026-09-30",
+  "notes": "Only the 65% equity floor applies; no cap-wise minimums.",
+  "ground_truth_mandate": {
+    "scheme_name": "Synthetic Dynamic Equity Fund",
+    "category": "flexi_cap",
+    "benchmark": "NIFTY 500 TRI"
+  },
+  "expect": {
+    "run_status": "COMPLIANT",
+    "review_kinds": [],
+    "findings": {
+      "SEBI-CAT-FLEXI-CAP-01": {
+        "status": "PASS",
+        "margin": "5.00"
+      }
+    }
+  }
+}

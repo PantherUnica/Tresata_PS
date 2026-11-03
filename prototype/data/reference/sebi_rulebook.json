@@ -1,0 +1,638 @@
+{
+  "note": "Prototype encoding of SEBI equity scheme rules. Texts are paraphrases, not quotations. Verify every threshold and effective date against the official circulars before any real use.",
+  "versions": [
+    {
+      "version": "2017-10",
+      "effective_from": "2017-10-06",
+      "circulars": [
+        "SEBI circular SEBI/HO/IMD/DF3/CIR/P/2017/114 (06-Oct-2017), categorisation and rationalisation of schemes"
+      ],
+      "note": "Original categorisation. Multi cap: 65% equity, no cap-wise minimums. No flexi cap category.",
+      "rules": [
+        {
+          "rule_id": "SEBI-CAT-LARGE-CAP-01",
+          "applies_to": [
+            "large_cap"
+          ],
+          "metric": "large_cap_pct",
+          "comparator": "min",
+          "threshold": "80",
+          "text": "At least 80% of total assets in large cap equity.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI circular SEBI/HO/IMD/DF3/CIR/P/2017/114 (06-Oct-2017), categorisation and rationalisation of schemes"
+        },
+        {
+          "rule_id": "SEBI-CAT-LARGE-MID-01",
+          "applies_to": [
+            "large_mid_cap"
+          ],
+          "metric": "large_cap_pct",
+          "comparator": "min",
+          "threshold": "35",
+          "text": "At least 35% in large cap equity.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI circular SEBI/HO/IMD/DF3/CIR/P/2017/114 (06-Oct-2017), categorisation and rationalisation of schemes"
+        },
+        {
+          "rule_id": "SEBI-CAT-LARGE-MID-02",
+          "applies_to": [
+            "large_mid_cap"
+          ],
+          "metric": "mid_cap_pct",
+          "comparator": "min",
+          "threshold": "35",
+          "text": "At least 35% in mid cap equity.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI circular SEBI/HO/IMD/DF3/CIR/P/2017/114 (06-Oct-2017), categorisation and rationalisation of schemes"
+        },
+        {
+          "rule_id": "SEBI-CAT-MID-CAP-01",
+          "applies_to": [
+            "mid_cap"
+          ],
+          "metric": "mid_cap_pct",
+          "comparator": "min",
+          "threshold": "65",
+          "text": "At least 65% in mid cap equity.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI circular SEBI/HO/IMD/DF3/CIR/P/2017/114 (06-Oct-2017), categorisation and rationalisation of schemes"
+        },
+        {
+          "rule_id": "SEBI-CAT-SMALL-CAP-01",
+          "applies_to": [
+            "small_cap"
+          ],
+          "metric": "small_cap_pct",
+          "comparator": "min",
+          "threshold": "65",
+          "text": "At least 65% in small cap equity.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI circular SEBI/HO/IMD/DF3/CIR/P/2017/114 (06-Oct-2017), categorisation and rationalisation of schemes"
+        },
+        {
+          "rule_id": "SEBI-CAT-ELSS-01",
+          "applies_to": [
+            "elss"
+          ],
+          "metric": "equity_pct",
+          "comparator": "min",
+          "threshold": "80",
+          "text": "At least 80% in equity (3-year lock-in).",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI circular SEBI/HO/IMD/DF3/CIR/P/2017/114 (06-Oct-2017), categorisation and rationalisation of schemes"
+        },
+        {
+          "rule_id": "SEBI-CAT-FOCUSED-01",
+          "applies_to": [
+            "focused"
+          ],
+          "metric": "equity_pct",
+          "comparator": "min",
+          "threshold": "65",
+          "text": "At least 65% in equity.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI circular SEBI/HO/IMD/DF3/CIR/P/2017/114 (06-Oct-2017), categorisation and rationalisation of schemes"
+        },
+        {
+          "rule_id": "SEBI-CAT-FOCUSED-02",
+          "applies_to": [
+            "focused"
+          ],
+          "metric": "stock_count",
+          "comparator": "max",
+          "threshold": "30",
+          "text": "A maximum of 30 stocks.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI circular SEBI/HO/IMD/DF3/CIR/P/2017/114 (06-Oct-2017), categorisation and rationalisation of schemes"
+        },
+        {
+          "rule_id": "SEBI-CAT-SECTORAL-01",
+          "applies_to": [
+            "sectoral_thematic"
+          ],
+          "metric": "sector_pct",
+          "comparator": "min",
+          "threshold": "80",
+          "text": "At least 80% in the stated sector or theme.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI circular SEBI/HO/IMD/DF3/CIR/P/2017/114 (06-Oct-2017), categorisation and rationalisation of schemes"
+        },
+        {
+          "rule_id": "SEBI-CAT-VALUE-01",
+          "applies_to": [
+            "value"
+          ],
+          "metric": "equity_pct",
+          "comparator": "min",
+          "threshold": "65",
+          "text": "At least 65% in equity, value strategy.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI circular SEBI/HO/IMD/DF3/CIR/P/2017/114 (06-Oct-2017), categorisation and rationalisation of schemes"
+        },
+        {
+          "rule_id": "SEBI-CAT-CONTRA-01",
+          "applies_to": [
+            "contra"
+          ],
+          "metric": "equity_pct",
+          "comparator": "min",
+          "threshold": "65",
+          "text": "At least 65% in equity, contrarian strategy.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI circular SEBI/HO/IMD/DF3/CIR/P/2017/114 (06-Oct-2017), categorisation and rationalisation of schemes"
+        },
+        {
+          "rule_id": "SEBI-CAT-DIVIDEND-YIELD-01",
+          "applies_to": [
+            "dividend_yield"
+          ],
+          "metric": "equity_pct",
+          "comparator": "min",
+          "threshold": "65",
+          "text": "At least 65% in equity, predominantly dividend-yielding (encoded as the equity floor only).",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI circular SEBI/HO/IMD/DF3/CIR/P/2017/114 (06-Oct-2017), categorisation and rationalisation of schemes"
+        },
+        {
+          "rule_id": "SEBI-CAT-MULTI-CAP-01",
+          "applies_to": [
+            "multi_cap"
+          ],
+          "metric": "equity_pct",
+          "comparator": "min",
+          "threshold": "65",
+          "text": "At least 65% in equity.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI circular SEBI/HO/IMD/DF3/CIR/P/2017/114 (06-Oct-2017), categorisation and rationalisation of schemes"
+        },
+        {
+          "rule_id": "SEBI-MFREG-ISSUER-10",
+          "applies_to": [
+            "*"
+          ],
+          "metric": "single_issuer_pct",
+          "comparator": "max",
+          "threshold": "10",
+          "text": "No more than 10% of NAV in the equity of any single company (index and some sectoral carve-outs are not auto-applied).",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI (Mutual Funds) Regulations, 1996, Seventh Schedule - single-issuer equity limit"
+        }
+      ]
+    },
+    {
+      "version": "2020-11",
+      "effective_from": "2020-11-06",
+      "circulars": [
+        "SEBI circular SEBI/HO/IMD/DF3/CIR/P/2017/114 (06-Oct-2017), categorisation and rationalisation of schemes",
+        "SEBI circulars of Sep-2020 (multi cap 25/25/25) and Nov-2020 (flexi cap category), encoded as one version"
+      ],
+      "note": "Multi cap gains 25% minimums in each cap; flexi cap introduced.",
+      "rules": [
+        {
+          "rule_id": "SEBI-CAT-LARGE-CAP-01",
+          "applies_to": [
+            "large_cap"
+          ],
+          "metric": "large_cap_pct",
+          "comparator": "min",
+          "threshold": "80",
+          "text": "At least 80% of total assets in large cap equity.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI circular SEBI/HO/IMD/DF3/CIR/P/2017/114 (06-Oct-2017), categorisation and rationalisation of schemes"
+        },
+        {
+          "rule_id": "SEBI-CAT-LARGE-MID-01",
+          "applies_to": [
+            "large_mid_cap"
+          ],
+          "metric": "large_cap_pct",
+          "comparator": "min",
+          "threshold": "35",
+          "text": "At least 35% in large cap equity.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI circular SEBI/HO/IMD/DF3/CIR/P/2017/114 (06-Oct-2017), categorisation and rationalisation of schemes"
+        },
+        {
+          "rule_id": "SEBI-CAT-LARGE-MID-02",
+          "applies_to": [
+            "large_mid_cap"
+          ],
+          "metric": "mid_cap_pct",
+          "comparator": "min",
+          "threshold": "35",
+          "text": "At least 35% in mid cap equity.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI circular SEBI/HO/IMD/DF3/CIR/P/2017/114 (06-Oct-2017), categorisation and rationalisation of schemes"
+        },
+        {
+          "rule_id": "SEBI-CAT-MID-CAP-01",
+          "applies_to": [
+            "mid_cap"
+          ],
+          "metric": "mid_cap_pct",
+          "comparator": "min",
+          "threshold": "65",
+          "text": "At least 65% in mid cap equity.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI circular SEBI/HO/IMD/DF3/CIR/P/2017/114 (06-Oct-2017), categorisation and rationalisation of schemes"
+        },
+        {
+          "rule_id": "SEBI-CAT-SMALL-CAP-01",
+          "applies_to": [
+            "small_cap"
+          ],
+          "metric": "small_cap_pct",
+          "comparator": "min",
+          "threshold": "65",
+          "text": "At least 65% in small cap equity.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI circular SEBI/HO/IMD/DF3/CIR/P/2017/114 (06-Oct-2017), categorisation and rationalisation of schemes"
+        },
+        {
+          "rule_id": "SEBI-CAT-ELSS-01",
+          "applies_to": [
+            "elss"
+          ],
+          "metric": "equity_pct",
+          "comparator": "min",
+          "threshold": "80",
+          "text": "At least 80% in equity (3-year lock-in).",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI circular SEBI/HO/IMD/DF3/CIR/P/2017/114 (06-Oct-2017), categorisation and rationalisation of schemes"
+        },
+        {
+          "rule_id": "SEBI-CAT-FOCUSED-01",
+          "applies_to": [
+            "focused"
+          ],
+          "metric": "equity_pct",
+          "comparator": "min",
+          "threshold": "65",
+          "text": "At least 65% in equity.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI circular SEBI/HO/IMD/DF3/CIR/P/2017/114 (06-Oct-2017), categorisation and rationalisation of schemes"
+        },
+        {
+          "rule_id": "SEBI-CAT-FOCUSED-02",
+          "applies_to": [
+            "focused"
+          ],
+          "metric": "stock_count",
+          "comparator": "max",
+          "threshold": "30",
+          "text": "A maximum of 30 stocks.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI circular SEBI/HO/IMD/DF3/CIR/P/2017/114 (06-Oct-2017), categorisation and rationalisation of schemes"
+        },
+        {
+          "rule_id": "SEBI-CAT-SECTORAL-01",
+          "applies_to": [
+            "sectoral_thematic"
+          ],
+          "metric": "sector_pct",
+          "comparator": "min",
+          "threshold": "80",
+          "text": "At least 80% in the stated sector or theme.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI circular SEBI/HO/IMD/DF3/CIR/P/2017/114 (06-Oct-2017), categorisation and rationalisation of schemes"
+        },
+        {
+          "rule_id": "SEBI-CAT-VALUE-01",
+          "applies_to": [
+            "value"
+          ],
+          "metric": "equity_pct",
+          "comparator": "min",
+          "threshold": "65",
+          "text": "At least 65% in equity, value strategy.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI circular SEBI/HO/IMD/DF3/CIR/P/2017/114 (06-Oct-2017), categorisation and rationalisation of schemes"
+        },
+        {
+          "rule_id": "SEBI-CAT-CONTRA-01",
+          "applies_to": [
+            "contra"
+          ],
+          "metric": "equity_pct",
+          "comparator": "min",
+          "threshold": "65",
+          "text": "At least 65% in equity, contrarian strategy.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI circular SEBI/HO/IMD/DF3/CIR/P/2017/114 (06-Oct-2017), categorisation and rationalisation of schemes"
+        },
+        {
+          "rule_id": "SEBI-CAT-DIVIDEND-YIELD-01",
+          "applies_to": [
+            "dividend_yield"
+          ],
+          "metric": "equity_pct",
+          "comparator": "min",
+          "threshold": "65",
+          "text": "At least 65% in equity, predominantly dividend-yielding (encoded as the equity floor only).",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI circular SEBI/HO/IMD/DF3/CIR/P/2017/114 (06-Oct-2017), categorisation and rationalisation of schemes"
+        },
+        {
+          "rule_id": "SEBI-CAT-MULTI-CAP-01",
+          "applies_to": [
+            "multi_cap"
+          ],
+          "metric": "equity_pct",
+          "comparator": "min",
+          "threshold": "75",
+          "text": "At least 75% in equity.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI circulars of Sep-2020 (multi cap 25/25/25) and Nov-2020 (flexi cap category), encoded as one version"
+        },
+        {
+          "rule_id": "SEBI-CAT-MULTI-CAP-02",
+          "applies_to": [
+            "multi_cap"
+          ],
+          "metric": "large_cap_pct",
+          "comparator": "min",
+          "threshold": "25",
+          "text": "At least 25% in large cap equity.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI circulars of Sep-2020 (multi cap 25/25/25) and Nov-2020 (flexi cap category), encoded as one version"
+        },
+        {
+          "rule_id": "SEBI-CAT-MULTI-CAP-03",
+          "applies_to": [
+            "multi_cap"
+          ],
+          "metric": "mid_cap_pct",
+          "comparator": "min",
+          "threshold": "25",
+          "text": "At least 25% in mid cap equity.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI circulars of Sep-2020 (multi cap 25/25/25) and Nov-2020 (flexi cap category), encoded as one version"
+        },
+        {
+          "rule_id": "SEBI-CAT-MULTI-CAP-04",
+          "applies_to": [
+            "multi_cap"
+          ],
+          "metric": "small_cap_pct",
+          "comparator": "min",
+          "threshold": "25",
+          "text": "At least 25% in small cap equity.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI circulars of Sep-2020 (multi cap 25/25/25) and Nov-2020 (flexi cap category), encoded as one version"
+        },
+        {
+          "rule_id": "SEBI-CAT-FLEXI-CAP-01",
+          "applies_to": [
+            "flexi_cap"
+          ],
+          "metric": "equity_pct",
+          "comparator": "min",
+          "threshold": "65",
+          "text": "At least 65% in equity; no cap-wise minimums.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI circulars of Sep-2020 (multi cap 25/25/25) and Nov-2020 (flexi cap category), encoded as one version"
+        },
+        {
+          "rule_id": "SEBI-MFREG-ISSUER-10",
+          "applies_to": [
+            "*"
+          ],
+          "metric": "single_issuer_pct",
+          "comparator": "max",
+          "threshold": "10",
+          "text": "No more than 10% of NAV in the equity of any single company (index and some sectoral carve-outs are not auto-applied).",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI (Mutual Funds) Regulations, 1996, Seventh Schedule - single-issuer equity limit"
+        }
+      ]
+    },
+    {
+      "version": "2026-02",
+      "effective_from": "2026-02-26",
+      "circulars": [
+        "SEBI circular SEBI/HO/IMD/DF3/CIR/P/2017/114 (06-Oct-2017), categorisation and rationalisation of schemes",
+        "SEBI circulars of Sep-2020 (multi cap 25/25/25) and Nov-2020 (flexi cap category), encoded as one version",
+        "SEBI categorisation circular, Feb-2026 (per PRD v0.3; category minimums carried forward) - reference to verify"
+      ],
+      "note": "New version added, not overwritten: runs dated before 2026-02-26 still reproduce against 2020-11.",
+      "rules": [
+        {
+          "rule_id": "SEBI-CAT-LARGE-CAP-01",
+          "applies_to": [
+            "large_cap"
+          ],
+          "metric": "large_cap_pct",
+          "comparator": "min",
+          "threshold": "80",
+          "text": "At least 80% of total assets in large cap equity.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI categorisation circular, Feb-2026 (per PRD v0.3; category minimums carried forward) - reference to verify"
+        },
+        {
+          "rule_id": "SEBI-CAT-LARGE-MID-01",
+          "applies_to": [
+            "large_mid_cap"
+          ],
+          "metric": "large_cap_pct",
+          "comparator": "min",
+          "threshold": "35",
+          "text": "At least 35% in large cap equity.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI categorisation circular, Feb-2026 (per PRD v0.3; category minimums carried forward) - reference to verify"
+        },
+        {
+          "rule_id": "SEBI-CAT-LARGE-MID-02",
+          "applies_to": [
+            "large_mid_cap"
+          ],
+          "metric": "mid_cap_pct",
+          "comparator": "min",
+          "threshold": "35",
+          "text": "At least 35% in mid cap equity.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI categorisation circular, Feb-2026 (per PRD v0.3; category minimums carried forward) - reference to verify"
+        },
+        {
+          "rule_id": "SEBI-CAT-MID-CAP-01",
+          "applies_to": [
+            "mid_cap"
+          ],
+          "metric": "mid_cap_pct",
+          "comparator": "min",
+          "threshold": "65",
+          "text": "At least 65% in mid cap equity.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI categorisation circular, Feb-2026 (per PRD v0.3; category minimums carried forward) - reference to verify"
+        },
+        {
+          "rule_id": "SEBI-CAT-SMALL-CAP-01",
+          "applies_to": [
+            "small_cap"
+          ],
+          "metric": "small_cap_pct",
+          "comparator": "min",
+          "threshold": "65",
+          "text": "At least 65% in small cap equity.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI categorisation circular, Feb-2026 (per PRD v0.3; category minimums carried forward) - reference to verify"
+        },
+        {
+          "rule_id": "SEBI-CAT-ELSS-01",
+          "applies_to": [
+            "elss"
+          ],
+          "metric": "equity_pct",
+          "comparator": "min",
+          "threshold": "80",
+          "text": "At least 80% in equity (3-year lock-in).",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI categorisation circular, Feb-2026 (per PRD v0.3; category minimums carried forward) - reference to verify"
+        },
+        {
+          "rule_id": "SEBI-CAT-FOCUSED-01",
+          "applies_to": [
+            "focused"
+          ],
+          "metric": "equity_pct",
+          "comparator": "min",
+          "threshold": "65",
+          "text": "At least 65% in equity.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI categorisation circular, Feb-2026 (per PRD v0.3; category minimums carried forward) - reference to verify"
+        },
+        {
+          "rule_id": "SEBI-CAT-FOCUSED-02",
+          "applies_to": [
+            "focused"
+          ],
+          "metric": "stock_count",
+          "comparator": "max",
+          "threshold": "30",
+          "text": "A maximum of 30 stocks.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI categorisation circular, Feb-2026 (per PRD v0.3; category minimums carried forward) - reference to verify"
+        },
+        {
+          "rule_id": "SEBI-CAT-SECTORAL-01",
+          "applies_to": [
+            "sectoral_thematic"
+          ],
+          "metric": "sector_pct",
+          "comparator": "min",
+          "threshold": "80",
+          "text": "At least 80% in the stated sector or theme.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI categorisation circular, Feb-2026 (per PRD v0.3; category minimums carried forward) - reference to verify"
+        },
+        {
+          "rule_id": "SEBI-CAT-VALUE-01",
+          "applies_to": [
+            "value"
+          ],
+          "metric": "equity_pct",
+          "comparator": "min",
+          "threshold": "65",
+          "text": "At least 65% in equity, value strategy.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI categorisation circular, Feb-2026 (per PRD v0.3; category minimums carried forward) - reference to verify"
+        },
+        {
+          "rule_id": "SEBI-CAT-CONTRA-01",
+          "applies_to": [
+            "contra"
+          ],
+          "metric": "equity_pct",
+          "comparator": "min",
+          "threshold": "65",
+          "text": "At least 65% in equity, contrarian strategy.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI categorisation circular, Feb-2026 (per PRD v0.3; category minimums carried forward) - reference to verify"
+        },
+        {
+          "rule_id": "SEBI-CAT-DIVIDEND-YIELD-01",
+          "applies_to": [
+            "dividend_yield"
+          ],
+          "metric": "equity_pct",
+          "comparator": "min",
+          "threshold": "65",
+          "text": "At least 65% in equity, predominantly dividend-yielding (encoded as the equity floor only).",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI categorisation circular, Feb-2026 (per PRD v0.3; category minimums carried forward) - reference to verify"
+        },
+        {
+          "rule_id": "SEBI-CAT-MULTI-CAP-01",
+          "applies_to": [
+            "multi_cap"
+          ],
+          "metric": "equity_pct",
+          "comparator": "min",
+          "threshold": "75",
+          "text": "At least 75% in equity.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI categorisation circular, Feb-2026 (per PRD v0.3; category minimums carried forward) - reference to verify"
+        },
+        {
+          "rule_id": "SEBI-CAT-MULTI-CAP-02",
+          "applies_to": [
+            "multi_cap"
+          ],
+          "metric": "large_cap_pct",
+          "comparator": "min",
+          "threshold": "25",
+          "text": "At least 25% in large cap equity.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI categorisation circular, Feb-2026 (per PRD v0.3; category minimums carried forward) - reference to verify"
+        },
+        {
+          "rule_id": "SEBI-CAT-MULTI-CAP-03",
+          "applies_to": [
+            "multi_cap"
+          ],
+          "metric": "mid_cap_pct",
+          "comparator": "min",
+          "threshold": "25",
+          "text": "At least 25% in mid cap equity.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI categorisation circular, Feb-2026 (per PRD v0.3; category minimums carried forward) - reference to verify"
+        },
+        {
+          "rule_id": "SEBI-CAT-MULTI-CAP-04",
+          "applies_to": [
+            "multi_cap"
+          ],
+          "metric": "small_cap_pct",
+          "comparator": "min",
+          "threshold": "25",
+          "text": "At least 25% in small cap equity.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI categorisation circular, Feb-2026 (per PRD v0.3; category minimums carried forward) - reference to verify"
+        },
+        {
+          "rule_id": "SEBI-CAT-FLEXI-CAP-01",
+          "applies_to": [
+            "flexi_cap"
+          ],
+          "metric": "equity_pct",
+          "comparator": "min",
+          "threshold": "65",
+          "text": "At least 65% in equity; no cap-wise minimums.",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI categorisation circular, Feb-2026 (per PRD v0.3; category minimums carried forward) - reference to verify"
+        },
+        {
+          "rule_id": "SEBI-MFREG-ISSUER-10",
+          "applies_to": [
+            "*"
+          ],
+          "metric": "single_issuer_pct",
+          "comparator": "max",
+          "threshold": "10",
+          "text": "No more than 10% of NAV in the equity of any single company (index and some sectoral carve-outs are not auto-applied).",
+          "text_kind": "paraphrase",
+          "source_ref": "SEBI (Mutual Funds) Regulations, 1996, Seventh Schedule - single-issuer equity limit"
+        }
+      ]
+    }
+  ]
+}

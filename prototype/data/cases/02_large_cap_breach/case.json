@@ -1,0 +1,24 @@
+{
+  "synthetic": true,
+  "id": "02",
+  "title": "Large-cap scheme at 78% large cap",
+  "kind": "compliance",
+  "as_of": "2026-09-30",
+  "notes": "Breach of the 80% category minimum by 2 pp.",
+  "ground_truth_mandate": {
+    "scheme_name": "Synthetic Frontline Fund",
+    "category": "large_cap",
+    "benchmark": "NIFTY 100 TRI",
+    "self_imposed_limits": []
+  },
+  "expect": {
+    "run_status": "BREACH",
+    "review_kinds": [],
+    "findings": {
+      "SEBI-CAT-LARGE-CAP-01": {
+        "status": "BREACH",
+        "margin": "-2.00"
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "synthetic": true,
+  "id": "10",
+  "title": "\"Predict next month's drift / recommend a trade\"",
+  "kind": "question",
+  "as_of": "2026-09-30",
+  "notes": "The scope guard declines before any model is called; current compliance is still reported.",
+  "ground_truth_mandate": {
+    "scheme_name": "Synthetic Bluechip Fund",
+    "category": "large_cap",
+    "benchmark": "NIFTY 100 TRI",
+    "self_imposed_limits": []
+  },
+  "question": "Predict next month's large-cap drift and recommend a trade to fix it.",
+  "expect": {
+    "run_status": "COMPLIANT",
+    "declined": true
+  }
+}

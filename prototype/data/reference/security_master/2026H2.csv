@@ -1,0 +1,34 @@
+isin,name,rank,bucket,sector
+INESY0001011,Aravali Bank Ltd,3,large,Banking
+INESY0002019,Bodhi Software Ltd,6,large,IT
+INESY0003017,Chola Energy Ltd,7,large,Energy
+INESY0004015,Deccan Consumer Ltd,12,large,FMCG
+INESY0005012,Eastern Pharma Ltd,17,large,Pharma
+INESY0006010,Fateh Motors Ltd,24,large,Auto
+INESY0007018,Ganga Steel Ltd,31,large,Metals
+INESY0008016,Himalaya Telecom Ltd,33,large,Telecom
+INESY0009014,Indus Infra Ltd,44,large,Infra
+INESY0010012,Jaipur Finance Ltd,45,large,Banking
+INESY0011010,Kaveri Chemicals Ltd,58,large,Chemicals
+INESY0012018,Lotus Digital Ltd,61,large,IT
+INESY0013016,Malabar Bank Ltd,70,large,Banking
+INESY0014014,Narmada Cement Ltd,86,large,Infra
+INESY0015011,Surya Power Grid Ltd,92,large,Energy
+INESY0016019,Orchid Retail Ltd,103,mid,FMCG
+INESY0017017,Peacock Logistics Ltd,110,mid,Infra
+INESY0018015,Quill Media Ltd,128,mid,Telecom
+INESY0019013,Rann Textiles Ltd,150,mid,FMCG
+INESY0020011,Sahyadri Bank Ltd,158,mid,Banking
+INESY0021019,Tapti Auto Parts Ltd,172,mid,Auto
+INESY0022017,Surya Power Finance Ltd,190,mid,Banking
+INESY0023015,Udaan Aviation Ltd,207,mid,Infra
+INESY0024013,Vindhya Pharma Ltd,215,mid,Pharma
+INESY0025010,Western Software Ltd,236,mid,IT
+INESY0026018,Xenon Labs Ltd,265,small,Pharma
+INESY0027016,Yamuna Foods Ltd,310,small,FMCG
+INESY0028014,Zenith Alloys Ltd,335,small,Metals
+INESY0029012,Amber Fintech Ltd,400,small,Banking
+INESY0030010,Banyan Solar Ltd,415,small,Energy
+INESY0031018,Cobalt Cables Ltd,470,small,Infra
+INESY0032016,Dhruv Data Ltd,530,small,IT
+INESY0033014,Ember Chemicals Ltd,590,small,Chemicals

@@ -1,0 +1,28 @@
+{
+  "synthetic": true,
+  "id": "01",
+  "title": "Large-cap scheme at 88% large cap",
+  "kind": "compliance",
+  "as_of": "2026-09-30",
+  "notes": "Happy path: every rule passes with clear margin.",
+  "ground_truth_mandate": {
+    "scheme_name": "Synthetic Bluechip Fund",
+    "category": "large_cap",
+    "benchmark": "NIFTY 100 TRI",
+    "self_imposed_limits": []
+  },
+  "expect": {
+    "run_status": "COMPLIANT",
+    "review_kinds": [],
+    "findings": {
+      "SEBI-CAT-LARGE-CAP-01": {
+        "status": "PASS",
+        "margin": "8.00"
+      },
+      "SEBI-MFREG-ISSUER-10": {
+        "status": "PASS",
+        "margin": "1.50"
+      }
+    }
+  }
+}

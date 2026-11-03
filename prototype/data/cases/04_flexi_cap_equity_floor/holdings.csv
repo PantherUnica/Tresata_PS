@@ -1,0 +1,14 @@
+isin,name,instrument_type,market_value,pct_of_nav
+INESY0001011,Aravali Bank Ltd,equity,800.00,8.00
+INESY0002019,Bodhi Software Ltd,equity,800.00,8.00
+INESY0003017,Chola Energy Ltd,equity,800.00,8.00
+INESY0004015,Deccan Consumer Ltd,equity,800.00,8.00
+INESY0005012,Eastern Pharma Ltd,equity,800.00,8.00
+INESY0017017,Peacock Logistics Ltd,equity,700.00,7.00
+INESY0018015,Quill Media Ltd,equity,700.00,7.00
+INESY0019013,Rann Textiles Ltd,equity,600.00,6.00
+INESY0026018,Xenon Labs Ltd,equity,500.00,5.00
+INESY0027016,Yamuna Foods Ltd,equity,500.00,5.00
+INGSY0001016,7.10% GOI 2030 (synthetic),debt,1500.00,15.00
+INGSY0002014,7.25% GOI 2033 (synthetic),debt,1000.00,10.00
+,TREPS / Cash & net receivables,cash,500.00,5.00

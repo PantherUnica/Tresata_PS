@@ -1,0 +1,27 @@
+{
+  "synthetic": true,
+  "id": "07",
+  "title": "Holding with no ISIN and an ambiguous name",
+  "kind": "compliance",
+  "as_of": "2026-09-30",
+  "notes": "'Surya Power' could be Surya Power Grid (large) or Surya Power Finance (mid). It is never silently bucketed, so the large-cap verdict is indeterminate (78.5% to 81.5%).",
+  "ground_truth_mandate": {
+    "scheme_name": "Synthetic Prime Equity Fund",
+    "category": "large_cap",
+    "benchmark": "NIFTY 100 TRI",
+    "self_imposed_limits": []
+  },
+  "expect": {
+    "run_status": "NEEDS_REVIEW",
+    "review_kinds": [
+      "unresolved_holding",
+      "indeterminate"
+    ],
+    "findings": {
+      "SEBI-CAT-LARGE-CAP-01": {
+        "status": "INDETERMINATE",
+        "margin": "-1.50"
+      }
+    }
+  }
+}

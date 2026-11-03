@@ -1,0 +1,26 @@
+{
+  "synthetic": true,
+  "id": "08",
+  "title": "Scheme at exactly 80.1% large cap",
+  "kind": "compliance",
+  "as_of": "2026-09-30",
+  "notes": "Passes by 0.1 pp, so it is forced to human review.",
+  "ground_truth_mandate": {
+    "scheme_name": "Synthetic Steady Equity Fund",
+    "category": "large_cap",
+    "benchmark": "NIFTY 100 TRI",
+    "self_imposed_limits": []
+  },
+  "expect": {
+    "run_status": "NEEDS_REVIEW",
+    "review_kinds": [
+      "near_threshold"
+    ],
+    "findings": {
+      "SEBI-CAT-LARGE-CAP-01": {
+        "status": "PASS",
+        "margin": "0.10"
+      }
+    }
+  }
+}

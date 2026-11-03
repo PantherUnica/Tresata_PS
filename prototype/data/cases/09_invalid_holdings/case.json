@@ -1,0 +1,16 @@
+{
+  "synthetic": true,
+  "id": "09",
+  "title": "Missing values, duplicate ISIN, bad ISIN and bad sums",
+  "kind": "validation",
+  "as_of": "2026-09-30",
+  "notes": "Rejected with row-level errors before any verdict.",
+  "expect": {
+    "validation_codes": [
+      "missing_value",
+      "duplicate_isin",
+      "invalid_isin",
+      "bad_total"
+    ]
+  }
+}

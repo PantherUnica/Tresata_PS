@@ -1,0 +1,6 @@
+isin,name,instrument_type,market_value,pct_of_nav
+INESY0001011,Aravali Bank Ltd,equity,850.00,8.50
+INESY0002019,Bodhi Software Ltd,equity,,8.50
+INESY0001011,Aravali Bank Ltd (second line),equity,500.00,5.00
+INE12345,Broken Isin Ltd,equity,100.00,1.00
+INESY0003017,Chola Energy Ltd,equity,8000.00,80.00

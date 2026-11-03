@@ -1,0 +1,35 @@
+{
+  "synthetic": true,
+  "id": "03",
+  "title": "Multi-cap with only 18% small cap",
+  "kind": "compliance",
+  "as_of": "2026-09-30",
+  "notes": "Breach of the 25%-each rule on the small-cap leg only.",
+  "ground_truth_mandate": {
+    "scheme_name": "Synthetic All Cap Fund",
+    "category": "multi_cap",
+    "benchmark": "NIFTY 500 Multicap 50:25:25 TRI"
+  },
+  "expect": {
+    "run_status": "BREACH",
+    "review_kinds": [],
+    "findings": {
+      "SEBI-CAT-MULTI-CAP-01": {
+        "status": "PASS",
+        "margin": "18.00"
+      },
+      "SEBI-CAT-MULTI-CAP-02": {
+        "status": "PASS",
+        "margin": "5.00"
+      },
+      "SEBI-CAT-MULTI-CAP-03": {
+        "status": "PASS",
+        "margin": "20.00"
+      },
+      "SEBI-CAT-MULTI-CAP-04": {
+        "status": "BREACH",
+        "margin": "-7.00"
+      }
+    }
+  }
+}

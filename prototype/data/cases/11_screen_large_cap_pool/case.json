@@ -1,0 +1,47 @@
+{
+  "synthetic": true,
+  "id": "11",
+  "title": "Screen a mixed-cap pool for a large-cap fund",
+  "kind": "screen",
+  "as_of": "2026-09-30",
+  "notes": "Buy 3% of NAV, funded by a pro-rata trim. Mid/small names would pull large cap below 80%; Aravali would exceed 10%; Orchid became mid cap in the 2026H2 list; Nova is unclassifiable.",
+  "ground_truth_mandate": {
+    "scheme_name": "Synthetic Select Equity Fund",
+    "category": "large_cap",
+    "benchmark": "NIFTY 100 TRI",
+    "self_imposed_limits": []
+  },
+  "candidates": "candidates.csv",
+  "weight_pct": "3",
+  "funding": "pro_rata",
+  "expect": {
+    "run_status": "COMPLIANT",
+    "findings": {
+      "SEBI-CAT-LARGE-CAP-01": {
+        "status": "PASS",
+        "margin": "2.00"
+      }
+    },
+    "eligible": [
+      "INESY0014014",
+      "INESY0013016"
+    ],
+    "blocking": {
+      "INESY0001011": [
+        "SEBI-MFREG-ISSUER-10"
+      ],
+      "INESY0020011": [
+        "SEBI-CAT-LARGE-CAP-01"
+      ],
+      "INESY0028014": [
+        "SEBI-CAT-LARGE-CAP-01"
+      ],
+      "INESY0016019": [
+        "SEBI-CAT-LARGE-CAP-01"
+      ],
+      "INESY9999017": [
+        "UNCLASSIFIED"
+      ]
+    }
+  }
+}

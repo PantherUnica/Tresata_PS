@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PortfolioLens</title>
+  <meta name="description" content="Mandate compliance for SEBI equity mutual funds: cited, reproducible, human-signed.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="/app.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230F172A'/%3E%3Cpath d='M7 21l6-7 4 4 8-10' fill='none' stroke='%2310B981' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="#/new" aria-label="PortfolioLens home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 12l4-5 3 3 5-7" stroke="#10B981" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="brand-name">PortfolioLens</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#/new" data-nav="new">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 3v10M3 8h10"/></svg>
+          New check
+        </a>
+        <a href="#/runs" data-nav="runs">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="11" height="11" rx="2"/><path d="M5.5 6.5h5M5.5 9.5h3"/></svg>
+          Runs
+        </a>
+        <a href="#/backtest" data-nav="backtest">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13V8M8 13V3M13 13V6"/></svg>
+          Backtest
+        </a>
+      </nav>
+
+      <div class="sidebar-foot">
+        <span class="chip" id="llm-chip" title="Model mode">Model <b id="llm-label">…</b></span>
+        <p class="small muted disclaimer">Compliance decision-support only. Not assurance, legal or investment advice. All bundled data is synthetic.</p>
+      </div>
+    </aside>
+
+    <main id="view" class="main" tabindex="-1" aria-live="polite"></main>
+  </div>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "synthetic": true,
+  "id": "05",
+  "title": "Single stock at 11% of net assets",
+  "kind": "compliance",
+  "as_of": "2026-09-30",
+  "notes": "Concentration breach of the 10% single-issuer limit.",
+  "ground_truth_mandate": {
+    "scheme_name": "Synthetic Leaders Fund",
+    "category": "large_cap",
+    "benchmark": "NIFTY 100 TRI",
+    "self_imposed_limits": []
+  },
+  "expect": {
+    "run_status": "BREACH",
+    "review_kinds": [],
+    "findings": {
+      "SEBI-MFREG-ISSUER-10": {
+        "status": "BREACH",
+        "margin": "-1.00"
+      },
+      "SEBI-CAT-LARGE-CAP-01": {
+        "status": "PASS",
+        "margin": "2.00"
+      }
+    }
+  }
+}

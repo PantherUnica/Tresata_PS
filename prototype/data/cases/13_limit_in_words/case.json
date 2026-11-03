@@ -1,0 +1,40 @@
+{
+  "synthetic": true,
+  "id": "13",
+  "title": "Self-imposed issuer cap written in words",
+  "kind": "compliance",
+  "as_of": "2026-09-30",
+  "notes": "Stress case beyond the PRD's 12: the SID caps any single company at 'eight and a half per cent'. A pattern matcher cannot read it; this is the language-understanding gap the extraction agent exists for, and Gate 1 is the backstop.",
+  "ground_truth_mandate": {
+    "scheme_name": "Synthetic Disciplined Equity Fund",
+    "category": "large_cap",
+    "benchmark": "NIFTY 100 TRI",
+    "self_imposed_limits": [
+      {
+        "metric": "single_issuer_pct",
+        "comparator": "max",
+        "threshold": "8.5",
+        "quote": "the fund manager will not allow exposure to any single company to exceed eight and a half per cent of the Scheme's net assets"
+      }
+    ]
+  },
+  "expect": {
+    "run_status": "BREACH",
+    "findings": {
+      "SID-SINGLE_ISSUER_PCT-MAX": {
+        "status": "BREACH",
+        "margin": "-0.50",
+        "binding": true
+      },
+      "SEBI-MFREG-ISSUER-10": {
+        "status": "PASS",
+        "margin": "1.00",
+        "binding": false
+      },
+      "SEBI-CAT-LARGE-CAP-01": {
+        "status": "PASS",
+        "margin": "3.50"
+      }
+    }
+  }
+}

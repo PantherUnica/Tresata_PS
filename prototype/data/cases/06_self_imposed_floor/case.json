@@ -1,0 +1,37 @@
+{
+  "synthetic": true,
+  "id": "06",
+  "title": "SID states a self-imposed 85% floor",
+  "kind": "compliance",
+  "as_of": "2026-09-30",
+  "notes": "At 83% the SEBI rule passes but the stricter SID limit binds and is breached.",
+  "ground_truth_mandate": {
+    "scheme_name": "Synthetic Core Equity Fund",
+    "category": "large_cap",
+    "benchmark": "NIFTY 100 TRI",
+    "self_imposed_limits": [
+      {
+        "metric": "large_cap_pct",
+        "comparator": "min",
+        "threshold": "85",
+        "quote": "the Scheme will invest at least 85% of its net assets in equity and equity related instruments of large cap companies"
+      }
+    ]
+  },
+  "expect": {
+    "run_status": "BREACH",
+    "review_kinds": [],
+    "findings": {
+      "SEBI-CAT-LARGE-CAP-01": {
+        "status": "PASS",
+        "margin": "3.00",
+        "binding": false
+      },
+      "SID-LARGE_CAP_PCT-MIN": {
+        "status": "BREACH",
+        "margin": "-2.00",
+        "binding": true
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "synthetic": true,
+  "id": "12",
+  "title": "What-if: buy large cap to move 78.3% to 80.1%",
+  "kind": "whatif",
+  "as_of": "2026-09-30",
+  "notes": "Buy 1.8% of NAV of Narmada Cement from cash. Nothing is executed and nothing is forecast.",
+  "ground_truth_mandate": {
+    "scheme_name": "Synthetic Recovery Equity Fund",
+    "category": "large_cap",
+    "benchmark": "NIFTY 100 TRI",
+    "self_imposed_limits": []
+  },
+  "trades": "trades.csv",
+  "expect": {
+    "run_status": "BREACH",
+    "findings": {
+      "SEBI-CAT-LARGE-CAP-01": {
+        "status": "BREACH",
+        "margin": "-1.70"
+      }
+    },
+    "whatif_before": {
+      "SEBI-CAT-LARGE-CAP-01": {
+        "status": "BREACH",
+        "margin": "-1.70"
+      }
+    },
+    "whatif_after": {
+      "SEBI-CAT-LARGE-CAP-01": {
+        "status": "PASS",
+        "margin": "0.10"
+      }
+    },
+    "new_breaches": [],
+    "resolved_breaches": [
+      "SEBI-CAT-LARGE-CAP-01"
+    ]
+  }
+}

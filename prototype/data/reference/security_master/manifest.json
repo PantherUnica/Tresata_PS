@@ -1,0 +1,17 @@
+{
+  "note": "Synthetic AMFI-style market-cap lists (rank 1-100 large, 101-250 mid, 251+ small). Fictional companies.",
+  "versions": [
+    {
+      "version": "2026H1",
+      "effective_from": "2026-01-01",
+      "file": "2026H1.csv",
+      "source": "synthetic"
+    },
+    {
+      "version": "2026H2",
+      "effective_from": "2026-07-01",
+      "file": "2026H2.csv",
+      "source": "synthetic"
+    }
+  ]
+}

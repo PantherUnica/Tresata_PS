@@ -1,0 +1,305 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1760 1130" width="1760" height="1130" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#374151"/>
+    </marker>
+    <marker id="arrBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0369A1"/>
+    </marker>
+    <style>
+      .t  { font-size: 13px; font-weight: 700; text-anchor: middle; }
+      .tg { font-size: 10px; font-weight: 700; text-anchor: middle; letter-spacing: 1.2px; fill: #B45309; }
+      .b  { font-size: 10.5px; text-anchor: middle; fill: #374151; }
+      .lt { font-size: 13px; font-weight: 800; letter-spacing: 0.8px; }
+      .lb { font-size: 10.5px; fill: #4B5563; }
+      .flow { stroke: #374151; stroke-width: 1.6; fill: none; }
+      .look { stroke: #0369A1; stroke-width: 1.5; fill: none; stroke-dasharray: 5 4; }
+      .note { font-size: 10.5px; font-style: italic; fill: #4B5563; }
+      .hum  { fill: #FFFFFF; stroke: #D97706; stroke-width: 2.4; }
+      .llm  { fill: #FFFFFF; stroke: #7C3AED; stroke-width: 1.8; }
+      .det  { fill: #FFFFFF; stroke: #0F766E; stroke-width: 1.8; }
+      .kno  { fill: #FFFFFF; stroke: #0369A1; stroke-width: 1.6; }
+      .inp  { fill: #F9FAFB; stroke: #6B7280; stroke-width: 1.4; }
+      .cH { fill: #92400E; } .cL { fill: #5B21B6; } .cD { fill: #115E59; } .cK { fill: #075985; } .cI { fill: #1F2937; }
+    </style>
+  </defs>
+
+  <rect width="1760" height="1130" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="30" y="44" font-size="26" font-weight="800" fill="#111827">PortfolioLens AI — High-level architecture</text>
+  <text x="30" y="70" font-size="14" fill="#4B5563">SEBI equity mutual-fund mandate compliance (P0) + constraint-aware screening &amp; what-if (P1) · The LLM proposes, code decides, a human signs off</text>
+
+  <!-- Legend -->
+  <g font-size="12" fill="#374151">
+    <rect x="30" y="98" width="16" height="16" rx="3" class="hum"/><text x="54" y="111">Human — accountable</text>
+    <rect x="210" y="98" width="16" height="16" rx="3" class="llm"/><text x="234" y="111">AI agent (LLM, probabilistic)</text>
+    <rect x="440" y="98" width="16" height="16" rx="3" class="det"/><text x="464" y="111">Deterministic code</text>
+    <rect x="600" y="98" width="16" height="16" rx="3" class="kno"/><text x="624" y="111">Versioned knowledge store</text>
+    <path d="M810,98 H822 L828,104 V114 H810 Z" class="inp"/><text x="836" y="111">Input file</text>
+    <line x1="925" y1="106" x2="960" y2="106" class="flow" marker-end="url(#arr)"/><text x="968" y="111">Flow</text>
+    <line x1="1020" y1="106" x2="1055" y2="106" class="look" marker-end="url(#arrBlue)"/><text x="1063" y="111">Lookup / reuse</text>
+    <line x1="1180" y1="106" x2="1215" y2="106" stroke="#DC2626" stroke-width="2.2" stroke-dasharray="8 5"/><text x="1223" y="111">Trust boundary</text>
+  </g>
+
+  <!-- ===== Swimlanes ===== -->
+  <rect x="20" y="140" width="1720" height="130" fill="#FFFBEB"/>
+  <rect x="20" y="270" width="1720" height="160" fill="#FAF5FF"/>
+  <rect x="20" y="430" width="1720" height="160" fill="#F0FDFA"/>
+  <rect x="20" y="590" width="1720" height="130" fill="#F0F9FF"/>
+  <rect x="20" y="140" width="110" height="130" fill="#FEF3C7"/>
+  <rect x="20" y="270" width="110" height="160" fill="#EDE9FE"/>
+  <rect x="20" y="430" width="110" height="160" fill="#CCFBF1"/>
+  <rect x="20" y="590" width="110" height="130" fill="#E0F2FE"/>
+  <g stroke="#E5E7EB" stroke-width="1">
+    <line x1="20" y1="270" x2="1740" y2="270"/>
+    <line x1="20" y1="590" x2="1740" y2="590"/>
+  </g>
+  <rect x="20" y="140" width="1720" height="580" fill="none" stroke="#D1D5DB"/>
+
+  <!-- Lane labels -->
+  <text x="30" y="186" class="lt cH">HUMAN</text>
+  <text x="30" y="205" class="lb">accountable;</text>
+  <text x="30" y="219" class="lb">owns the final</text>
+  <text x="30" y="233" class="lb">judgement</text>
+
+  <text x="30" y="326" class="lt cL">AI AGENTS</text>
+  <text x="30" y="345" class="lb">probabilistic —</text>
+  <text x="30" y="359" class="lb">read, extract,</text>
+  <text x="30" y="373" class="lb">retrieve, explain</text>
+
+  <text x="30" y="486" class="lt cD">CODE</text>
+  <text x="30" y="505" class="lb">deterministic —</text>
+  <text x="30" y="519" class="lb">computes and</text>
+  <text x="30" y="533" class="lb">decides</text>
+
+  <text x="30" y="636" class="lt cK">KNOWLEDGE</text>
+  <text x="30" y="655" class="lb">versioned,</text>
+  <text x="30" y="669" class="lb">pinned per run</text>
+
+  <!-- Inputs column label -->
+  <text x="150" y="186" font-size="11" font-weight="800" letter-spacing="1" fill="#4B5563">INPUTS</text>
+  <text x="150" y="203" class="lb">files only —</text>
+  <text x="150" y="217" class="lb">public / synthetic</text>
+  <text x="150" y="231" class="lb">data, no client data</text>
+
+  <!-- Trust boundary -->
+  <line x1="130" y1="430" x2="1740" y2="430" stroke="#DC2626" stroke-width="2.2" stroke-dasharray="8 5"/>
+  <rect x="525" y="410" width="270" height="40" rx="8" fill="#FEF2F2" stroke="#DC2626" stroke-width="1.4"/>
+  <text x="660" y="426" font-size="11" font-weight="800" letter-spacing="1" text-anchor="middle" fill="#B91C1C">TRUST BOUNDARY</text>
+  <text x="660" y="442" font-size="10" text-anchor="middle" fill="#7F1D1D">no agent computes a %, margin or pass/fail</text>
+
+  <!-- ===== Inputs ===== -->
+  <path d="M150,305 H284 L300,321 V395 H150 Z" class="inp"/>
+  <path d="M284,305 V321 H300" fill="none" stroke="#6B7280" stroke-width="1.2"/>
+  <text x="225" y="334" class="t cI">SID</text>
+  <text x="225" y="352" class="b">Scheme Information</text>
+  <text x="225" y="366" class="b">Document — mandate</text>
+  <text x="225" y="380" class="b">written in prose</text>
+
+  <path d="M150,465 H284 L300,481 V555 H150 Z" class="inp"/>
+  <path d="M284,465 V481 H300" fill="none" stroke="#6B7280" stroke-width="1.2"/>
+  <text x="225" y="494" class="t cI">Holdings file</text>
+  <text x="225" y="512" class="b">monthly portfolio</text>
+  <text x="225" y="526" class="b">disclosure (CSV)</text>
+  <text x="225" y="540" class="b">ISIN · name · MV</text>
+
+  <!-- ===== P0 boxes ===== -->
+  <rect x="330" y="460" width="170" height="100" rx="10" class="det"/>
+  <text x="415" y="484" class="t cD">Ingest &amp; validate</text>
+  <text x="415" y="503" class="b">schema, dup ISINs, sums</text>
+  <text x="415" y="518" class="b">bad rows → row-level</text>
+  <text x="415" y="533" class="b">errors, never a</text>
+  <text x="415" y="548" class="b">fabricated verdict</text>
+
+  <rect x="530" y="300" width="170" height="100" rx="10" class="llm"/>
+  <text x="615" y="324" class="t cL">Mandate Extraction</text>
+  <text x="615" y="343" class="b">SID prose → category,</text>
+  <text x="615" y="358" class="b">limits, benchmark</text>
+  <text x="615" y="373" class="b">+ cited clause per field</text>
+
+  <rect x="530" y="170" width="170" height="70" rx="10" class="hum"/>
+  <text x="615" y="189" class="tg">GATE 1</text>
+  <text x="615" y="207" class="t cH">Confirm mandate</text>
+  <text x="615" y="225" class="b">approve / correct each field</text>
+
+  <rect x="730" y="300" width="170" height="100" rx="10" class="llm"/>
+  <text x="815" y="324" class="t cL">Rule Retrieval (RAG)</text>
+  <text x="815" y="343" class="b">matching SEBI rule set</text>
+  <text x="815" y="358" class="b">rule ID · threshold ·</text>
+  <text x="815" y="373" class="b">effective date, cited</text>
+
+  <rect x="940" y="282" width="112" height="16" rx="8" fill="#FEE2E2" stroke="#DC2626" stroke-width="1"/>
+  <text x="996" y="294" font-size="9.5" font-weight="800" letter-spacing="0.8" text-anchor="middle" fill="#B91C1C">WEAKEST POINT</text>
+  <rect x="930" y="300" width="170" height="100" rx="10" class="llm"/>
+  <text x="1015" y="324" class="t cL" font-size="12.5">Holdings Classification</text>
+  <text x="1015" y="343" class="b">name → ISIN resolution</text>
+  <text x="1015" y="358" class="b">with a confidence score</text>
+  <text x="1015" y="373" class="b">(identity only)</text>
+
+  <rect x="930" y="460" width="170" height="100" rx="10" class="det"/>
+  <text x="1015" y="484" class="t cD">ISIN → AMFI join</text>
+  <text x="1015" y="503" class="b">cap bucket · sector · type</text>
+  <text x="1015" y="518" class="b">unmatched items are</text>
+  <text x="1015" y="533" class="b">never auto-bucketed</text>
+
+  <rect x="1130" y="170" width="170" height="70" rx="10" class="hum"/>
+  <text x="1215" y="189" class="tg">GATE 2</text>
+  <text x="1215" y="207" class="t cH">Exception review</text>
+  <text x="1215" y="225" class="b">unmatched · near-threshold</text>
+
+  <rect x="1130" y="460" width="170" height="100" rx="10" class="det"/>
+  <text x="1215" y="484" class="t cD">Reconciliation engine</text>
+  <text x="1215" y="503" class="b">bucket %, concentration,</text>
+  <text x="1215" y="518" class="b">stricter limit wins</text>
+  <text x="1215" y="533" class="b">→ facts object: pass /</text>
+  <text x="1215" y="548" class="b">fail / breach + margin</text>
+
+  <rect x="1330" y="300" width="170" height="100" rx="10" class="llm"/>
+  <text x="1415" y="324" class="t cL">Report / Explanation</text>
+  <text x="1415" y="343" class="b">facts object → cited</text>
+  <text x="1415" y="358" class="b">exception report +</text>
+  <text x="1415" y="373" class="b">grounded Q&amp;A</text>
+
+  <rect x="1330" y="460" width="170" height="100" rx="10" class="det"/>
+  <text x="1415" y="484" class="t cD">Citation check</text>
+  <text x="1415" y="503" class="b">every claim → fact_id</text>
+  <text x="1415" y="518" class="b">unknown IDs rejected;</text>
+  <text x="1415" y="533" class="b">LLM output is untrusted</text>
+
+  <rect x="1530" y="170" width="170" height="70" rx="10" class="hum"/>
+  <text x="1615" y="189" class="tg">GATE 3</text>
+  <text x="1615" y="207" class="t cH">Sign-off &amp; export</text>
+  <text x="1615" y="225" class="b">attributable, per run</text>
+
+  <!-- ===== Knowledge stores ===== -->
+  <rect x="330" y="612" width="370" height="90" rx="10" class="kno"/>
+  <text x="515" y="634" class="t cK">Code + run store</text>
+  <text x="515" y="653" class="b">Reconciliation logic in git → engine version</text>
+  <text x="515" y="668" class="b">Confirmed mandate + clause citations kept per run</text>
+  <text x="515" y="683" class="b">New SID supersedes ⇒ re-extract + re-confirm</text>
+
+  <rect x="730" y="612" width="170" height="90" rx="10" class="kno"/>
+  <text x="815" y="634" class="t cK">SEBI rulebook index</text>
+  <text x="815" y="653" class="b">versioned, effective-dated</text>
+  <text x="815" y="668" class="b">new circular ⇒ add a</text>
+  <text x="815" y="683" class="b">version, never overwrite</text>
+
+  <rect x="930" y="612" width="170" height="90" rx="10" class="kno"/>
+  <text x="1015" y="634" class="t cK">AMFI market-cap list</text>
+  <text x="1015" y="653" class="b">dated, semi-annual</text>
+  <text x="1015" y="668" class="b">run pins the list in</text>
+  <text x="1015" y="683" class="b">force on the as-of date</text>
+
+  <rect x="1330" y="612" width="370" height="90" rx="10" class="kno"/>
+  <text x="1515" y="634" class="t cK">Audit record (per run)</text>
+  <text x="1515" y="653" class="b">run ID · dataset hash · rulebook, AMFI &amp; engine versions</text>
+  <text x="1515" y="668" class="b">mandate clause citations · reviewer identity + sign-off</text>
+  <text x="1515" y="683" class="b">→ an auditor can re-derive any verdict</text>
+
+  <!-- ===== P0 arrows ===== -->
+  <path d="M300,510 H326" class="flow" marker-end="url(#arr)"/>
+  <path d="M300,335 H375 V456" class="flow" marker-end="url(#arr)"/>
+  <path d="M455,460 V370 H526" class="flow" marker-end="url(#arr)"/>
+  <path d="M615,300 V244" class="flow" marker-end="url(#arr)"/>
+  <path d="M700,205 H815 V296" class="flow" marker-end="url(#arr)"/>
+  <path d="M900,350 H926" class="flow" marker-end="url(#arr)"/>
+  <path d="M1015,400 V456" class="flow" marker-end="url(#arr)"/>
+  <path d="M1100,510 H1126" class="flow" marker-end="url(#arr)"/>
+  <path d="M1065,300 V205 H1126" class="flow" marker-end="url(#arr)"/>
+  <path d="M1215,460 V244" class="flow" marker-end="url(#arr)"/>
+  <path d="M1300,490 H1314 V350 H1326" class="flow" marker-end="url(#arr)"/>
+  <path d="M1415,400 V456" class="flow" marker-end="url(#arr)"/>
+  <path d="M1500,510 H1600 V244" class="flow" marker-end="url(#arr)"/>
+  <path d="M1300,205 H1526" class="flow" marker-end="url(#arr)"/>
+  <path d="M1665,240 V608" class="flow" marker-end="url(#arr)"/>
+
+  <path d="M815,612 V404" class="look" marker-end="url(#arrBlue)"/>
+  <text x="823" y="510" class="note">query @ pinned</text>
+  <text x="823" y="524" class="note">rulebook version</text>
+  <path d="M1015,612 V564" class="look" marker-end="url(#arrBlue)"/>
+
+  <!-- ===== P1 band ===== -->
+  <rect x="20" y="755" width="1720" height="160" rx="10" fill="#FAFAFA" stroke="#9CA3AF" stroke-dasharray="6 4"/>
+  <text x="34" y="780" font-size="13" font-weight="800" letter-spacing="0.8" fill="#111827">P1 · CONSTRAINT-AWARE SCREENING + WHAT-IF</text>
+  <text x="34" y="798" class="lb">Branches off the confirmed mandate and pinned rule set; never re-reads the SID, so a scenario cannot change a compliance verdict.</text>
+
+  <path d="M1215,560 V811" class="look" marker-end="url(#arrBlue)"/>
+  <text x="1225" y="742" class="note">reuses the same engine, confirmed mandate &amp; pinned rules</text>
+
+  <path d="M150,815 H284 L300,831 V895 H150 Z" class="inp"/>
+  <path d="M284,815 V831 H300" fill="none" stroke="#6B7280" stroke-width="1.2"/>
+  <text x="225" y="843" class="t cI">Candidate pool</text>
+  <text x="225" y="861" class="b">or proposed trade</text>
+  <text x="225" y="876" class="b">(P1 input)</text>
+
+  <rect x="930" y="815" width="170" height="80" rx="10" class="llm"/>
+  <text x="1015" y="838" class="t cL">Candidate Screening</text>
+  <text x="1015" y="857" class="b">tags sector / cap bucket</text>
+  <text x="1015" y="872" class="b">only where data is missing</text>
+
+  <rect x="1130" y="815" width="170" height="80" rx="10" class="det"/>
+  <text x="1215" y="838" class="t cD">Eligibility &amp; What-if</text>
+  <text x="1215" y="857" class="b">in/out + binding constraint</text>
+  <text x="1215" y="872" class="b">before → after compliance</text>
+
+  <rect x="1330" y="815" width="170" height="80" rx="10" class="llm"/>
+  <text x="1415" y="838" class="t cL">Scenario explanation</text>
+  <text x="1415" y="857" class="b">cited, labelled scenario</text>
+  <text x="1415" y="872" class="b">no advice, no forecast</text>
+
+  <rect x="1530" y="815" width="170" height="80" rx="10" class="hum"/>
+  <text x="1615" y="838" class="t cH">Manager decides</text>
+  <text x="1615" y="857" class="b">acts outside the tool;</text>
+  <text x="1615" y="872" class="b">no order is placed</text>
+
+  <path d="M300,855 H926" class="flow" marker-end="url(#arr)"/>
+  <text x="615" y="847" class="note" text-anchor="middle">eligibility only — no return forecast, no “best buy” ranking</text>
+  <path d="M1100,855 H1126" class="flow" marker-end="url(#arr)"/>
+  <path d="M1300,855 H1326" class="flow" marker-end="url(#arr)"/>
+  <path d="M1500,855 H1526" class="flow" marker-end="url(#arr)"/>
+
+  <!-- ===== Rejected alternatives ===== -->
+  <text x="30" y="958" font-size="13" font-weight="800" letter-spacing="0.8" fill="#111827">CONSIDERED AND REJECTED</text>
+  <g>
+    <rect x="20" y="970" width="276" height="88" rx="10" fill="#FFFFFF" stroke="#E5E7EB"/>
+    <text x="34" y="992" font-size="12.5" font-weight="700" fill="#B91C1C">× One LLM call → verdict</text>
+    <text x="34" y="1012" font-size="10.5" fill="#374151">Model does the arithmetic (not auditable),</text>
+    <text x="34" y="1027" font-size="10.5" fill="#374151">recalls thresholds from memory (stale),</text>
+    <text x="34" y="1042" font-size="10.5" fill="#374151">one-shot answer can't be reproduced.</text>
+
+    <rect x="308" y="970" width="276" height="88" rx="10" fill="#FFFFFF" stroke="#E5E7EB"/>
+    <text x="322" y="992" font-size="12.5" font-weight="700" fill="#B91C1C">× Pure rules engine, no LLM</text>
+    <text x="322" y="1012" font-size="10.5" fill="#374151">Can't read prose mandates; SID wording</text>
+    <text x="322" y="1027" font-size="10.5" fill="#374151">varies by AMC, so limits can't be</text>
+    <text x="322" y="1042" font-size="10.5" fill="#374151">hand-coded for every scheme.</text>
+
+    <rect x="596" y="970" width="276" height="88" rx="10" fill="#FFFFFF" stroke="#E5E7EB"/>
+    <text x="610" y="992" font-size="12.5" font-weight="700" fill="#B91C1C">× Self-correcting agent loop</text>
+    <text x="610" y="1012" font-size="10.5" fill="#374151">A regulator must re-derive every number;</text>
+    <text x="610" y="1027" font-size="10.5" fill="#374151">that needs a fixed, reproducible DAG,</text>
+    <text x="610" y="1042" font-size="10.5" fill="#374151">not a loop that can take a new path.</text>
+
+    <rect x="884" y="970" width="276" height="88" rx="10" fill="#FFFFFF" stroke="#E5E7EB"/>
+    <text x="898" y="992" font-size="12.5" font-weight="700" fill="#B91C1C">× LLM assigns cap buckets</text>
+    <text x="898" y="1012" font-size="10.5" fill="#374151">Free-form bucketing isn't reproducible;</text>
+    <text x="898" y="1027" font-size="10.5" fill="#374151">replaced by a deterministic ISIN → AMFI</text>
+    <text x="898" y="1042" font-size="10.5" fill="#374151">join. The LLM only resolves identity.</text>
+
+    <rect x="1172" y="970" width="276" height="88" rx="10" fill="#FFFFFF" stroke="#E5E7EB"/>
+    <text x="1186" y="992" font-size="12.5" font-weight="700" fill="#B91C1C">× Return-forecast / “best buy” agent</text>
+    <text x="1186" y="1012" font-size="10.5" fill="#374151">Reintroduces investment advice and</text>
+    <text x="1186" y="1027" font-size="10.5" fill="#374151">non-auditable forecasts; screening stays</text>
+    <text x="1186" y="1042" font-size="10.5" fill="#374151">a deterministic eligibility filter.</text>
+
+    <rect x="1460" y="970" width="276" height="88" rx="10" fill="#FFFFFF" stroke="#E5E7EB"/>
+    <text x="1474" y="992" font-size="12.5" font-weight="700" fill="#B91C1C">× Microservice per agent</text>
+    <text x="1474" y="1012" font-size="10.5" fill="#374151">Network and ops overhead with no benefit</text>
+    <text x="1474" y="1027" font-size="10.5" fill="#374151">at this scale; a modular monolith keeps</text>
+    <text x="1474" y="1042" font-size="10.5" fill="#374151">the same boundaries.</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="30" y="1088" font-size="11.5" fill="#374151"><tspan font-weight="700">Traceability:</tspan> verdict → facts object → holdings rows + SID clause + rule ID @ version + AMFI list @ date → audit record.</text>
+  <text x="30" y="1108" font-size="11.5" fill="#374151"><tspan font-weight="700">Jurisdiction:</tspan> SEBI (India) equity schemes; only the rulebook index and market-cap table change for UCITS / ’40 Act.  <tspan font-weight="700">Output:</tspan> compliance decision-support, not advice.</text>
+</svg>
